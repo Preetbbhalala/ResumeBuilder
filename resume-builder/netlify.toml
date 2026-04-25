@@ -1,0 +1,15 @@
+[build]
+  base    = "resume-builder"
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from   = "/api/*"
+  to     = "https://resumebuilder-api-1tnp.onrender.com/:splat"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
