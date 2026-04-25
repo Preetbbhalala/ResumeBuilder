@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: resumebuilder-api
+    runtime: node
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        sync: false
